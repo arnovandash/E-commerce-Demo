@@ -42,19 +42,20 @@
 #subtitle {
 	font-family: 'Fredericka the Great', cursive;
 	color: #fff;
+	font-weight: bold;
 	text-align: center;
-	font-size: 36px;
+	font-size: 2vw;
 }
 #title {
 	font-family: 'Fredericka the Great', cursive;
 	color: #fff;
-	font-size: 80px;
+	font-size: 5vw;
 	text-align: center !important;
 }
 #order {
 	text-align: center;
 	color: yellow;
-	font-size: 18px;
+	font-size: 1vw;
 	padding: 15px 32px;
 }
 #order a {
@@ -64,11 +65,48 @@
 	color: yellow;
 	text-decoration: unset;
 }
+aside {
+	width: 30vw;
+}
+}
 #order a:hover {
 	background-color: #aa0005;
 }
 #container {
-    width: 50%;
+    width: 50vw;
     margin-left: auto;
     margin-right: auto;
+}
+#admin {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 5px;
+	color: #f2e3c6;
+}
+#admin h1 {
+	border-bottom: 1px solid #f2e3c6;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
 }
