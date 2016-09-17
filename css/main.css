@@ -23,15 +23,21 @@
  /* hi-res laptops and desktops */ 
 }
 
-body {
+#main {
 	background-image: url('../img/Pizza-Wallpaper.jpg');
 	background-size: cover;
+}
+#menu {
+	/*background-image: url('../img/bg.jpeg');*/
+	background-color: #562517;
+	/*background-size: cover;*/
 }
 #nav h1 {
 	color: #f2e3c6;
 	font-size: 75px;
 	font-family: 'Tulpen One', cursive;
 	margin-left: 30px;
+	margin-top: 0;
 }
 #subtitle {
 	font-family: 'Fredericka the Great', cursive;
@@ -50,6 +56,16 @@ body {
 	color: yellow;
 	font-size: 18px;
 	padding: 15px 32px;
+}
+#order a {
+	border: 1px solid yellow;
+	padding: 15px 32px;
+	text-transform: uppercase;
+	color: yellow;
+	text-decoration: unset;
+}
+#order a:hover {
+	background-color: #aa0005;
 }
 #container {
     width: 50%;
