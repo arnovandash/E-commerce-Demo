@@ -88,6 +88,7 @@ aside {
 	font-family: 'Fredericka the Great', cursive;
 	text-align: center;
 	font-size: 6vw;
+	margin-top: 0;
 }
 .logins {
 	width: 30vw;
@@ -142,6 +143,10 @@ input[type=text], select, textarea, input[type=password] {
     box-sizing: border-box;
     font-family: 'Fredericka the Great', cursive;
 }
+.header-div {
+	width: 25vw;
+	display: inline-block;
+}
 .item {
 	width: 12vw;
 	display: inline-block;
@@ -179,12 +184,7 @@ form {
     border-radius: 4px;
     cursor: pointer;
 }
-/*.textborder form > p > a {
-	color: #fff;
-}
-.textborder form > p > a:hover {
-	color: red;
-}*/
+
 .register a {
 	color: #fff;
 }
@@ -197,7 +197,11 @@ form {
 	font-family: 'Fredericka the Great', cursive;
 
 }
-
+.user-login {
+	float:right;
+	text-align:right;
+	margin-right:10px;
+}
 #dropdown{
 	ul : list-style: none;padding: 0px;margin: 0px;};
 	ul li {display: block;position: relative;float: left;border:1px solid #000};
@@ -214,4 +218,13 @@ li:hover li a:hover {background: #000;}
 
 #admin-sub:hover {
     background-color: #45a049;
+}
+
+/*add to cart*/
+.add-to-cart input[type=number] {
+	width: 2vw;
+}
+
+.add-to-cart select {
+	width: 5vw;
 }

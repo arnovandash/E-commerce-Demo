@@ -1,5 +1,4 @@
 <?php
-session_start();
 $db = mysqli_connect('localhost', 'root', '000000', 'rush');
 $connection_error = mysqli_connect_error();
 if ($connection_error != null) {
@@ -30,12 +29,6 @@ function display_products()
 </head>
 <body id="menu" class="textborder">
 <?php require_once('header.php'); ?>
-
-<h1> Welcome<?php echo " ".$_SESSION['logged_on_user'];?>!</h1>
-<br />
-
-<button><a class="buttontext" href="./usr/login.php"> Login </a></button>
-<button><a class="buttontext" href="./usr/logout.php"> Logout </a></button>
 <div class="menu">
 <h1 class="textborder">Pizza Menu</h1>
 	<?php  
@@ -44,7 +37,17 @@ function display_products()
 	<div class="item">
 		<img src="img/<?php echo trim($value['pizza_img']); ?>">
 		<p><?php echo trim($value['pizza_name']); ?></p>
-		<button>add to cart</button>
+		<div class="add-to-cart">
+			<form method="post" action="">
+				<input type="number" min="1" value="1" name="qlty">
+				<select>
+					<option>Small</option>
+					<option>Medium</option>
+					<option>Large</option>
+				</select>
+				<input type="submit" name="cart" value="ADD">
+			</form>
+		</div>
 	</div>
 	<?php endforeach; ?>
 </div>
