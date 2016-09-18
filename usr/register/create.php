@@ -9,9 +9,9 @@ function user_exists($user, $file_array)
     return (false);
 }
 
-if ($_POST['submit'] == "OK" && $_POST['login'] != "" && $_POST['passwd'] != "")
+if ($_POST['login'] != "" && $_POST['passwd'] != "")
 {
-    $pass = hash(whirlpool, $_POST['passwd'], false);
+    $pass = hash('whirlpool', $_POST['passwd']);
     $account_array = array('login' => $_POST['login'], 'passwd' => $pass);
     if (file_exists('../private/') === false)
     {
@@ -21,15 +21,16 @@ if ($_POST['submit'] == "OK" && $_POST['login'] != "" && $_POST['passwd'] != "")
         $file_array = unserialize(file_get_contents('../private/passwd'));
     if (user_exists($_POST['login'], $file_array))
     {
-        echo "ERROR\n";
+        echo "Username already exists.\n";
     }
     else
     {
         $file_array[] = $account_array;
         file_put_contents('../private/passwd', serialize($file_array));
-        echo "OK\n";
+        header('Location: ../login.html');
+        echo "Registration successful!\n";
     }
 }
 else
-  echo "ERROR\n";
+  echo "Username or password entered incorrectly.\n";
 ?>

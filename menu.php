@@ -20,15 +20,21 @@ function display_products()
     return ($data);
 }
 ?>
-<!DOCTYPE html>
+
 <html>
 <head>
 	<title>Rush 00</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body id="menu"  class="textborder">
+<body id="menu" class="textborder">
 <?php require_once('header.php'); ?>
+
+<h1> Welcome<?php echo " ".$_SESSION['logged_on_user'];?>!</h1>
+<br />
+
+<button><a class="buttontext" href="./usr/login.html"> Login </a></button>
+<button><a class="buttontext" href="./usr/logout.php"> Logout </a></button>
 <div class="menu">
 	<?php  
 	$data = display_products();
