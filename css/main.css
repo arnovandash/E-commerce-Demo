@@ -30,6 +30,13 @@
  	class: '.textborder';
  	margin: auto;
 }
+#users {
+	background-image: url('../img/Pizza-Photos.jpg');
+	/*background-image: url('https://victoremagency.files.wordpress.com/2016/03/pizza-20439-20951-hd-wallpapers.jpg');*/
+	background-size: cover;
+	margin: auto;
+	color: #fff;
+}
 #menu {	
 	background-image: url('../img/bg.jpeg');
 	background-color: #562517;	
@@ -76,6 +83,19 @@
 aside {
 	width: 30vw;
 }
+.menu h1:nth-child(1)
+{
+	font-family: 'Fredericka the Great', cursive;
+	text-align: center;
+	font-size: 6vw;
+}
+.logins {
+	width: 30vw;
+	margin: auto;
+}
+.logins h1 {
+	font-family: 'Fredericka the Great', cursive;
+}
 #order a:hover {
 	background: #45a049;
 }
@@ -112,7 +132,7 @@ aside {
 	margin-right: auto;
 	padding: 5px;
 }
-input[type=text], select, textarea {
+input[type=text], select, textarea, input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -120,6 +140,7 @@ input[type=text], select, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: 'Fredericka the Great', cursive;
 }
 .item {
 	width: 12vw;
@@ -138,6 +159,9 @@ input[type=text], select, textarea {
     font-size: .8vw;
     text-decoration: unset;
 }
+form {
+	font-family: 'Fredericka the Great', cursive;
+}
 .item img {
 	width: 100%;
 }
@@ -155,10 +179,23 @@ input[type=text], select, textarea {
     border-radius: 4px;
     cursor: pointer;
 }
-
+/*.textborder form > p > a {
+	color: #fff;
+}
+.textborder form > p > a:hover {
+	color: red;
+}*/
+.register a {
+	color: #fff;
+}
+.register a:hover {
+	color: red;
+}
 .buttontext {
 	text-decoration: none;
 	color: #000000;
+	font-family: 'Fredericka the Great', cursive;
+
 }
 
 #dropdown{

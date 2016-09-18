@@ -1,4 +1,5 @@
 <?php
+session_start();
 $db = mysqli_connect('localhost', 'root', '000000', 'rush');
 $connection_error = mysqli_connect_error();
 if ($connection_error != null) {
@@ -33,9 +34,10 @@ function display_products()
 <h1> Welcome<?php echo " ".$_SESSION['logged_on_user'];?>!</h1>
 <br />
 
-<button><a class="buttontext" href="./usr/login.html"> Login </a></button>
+<button><a class="buttontext" href="./usr/login.php"> Login </a></button>
 <button><a class="buttontext" href="./usr/logout.php"> Logout </a></button>
 <div class="menu">
+<h1 class="textborder">Pizza Menu</h1>
 	<?php  
 	$data = display_products();
 	foreach ($data as $key => $value) : ?>
