@@ -37,6 +37,17 @@
 	margin: auto;
 	color: #fff;
 }
+
+#error {
+	background-image: url('../img/oops.jpg');
+	/*background-image: url('http://images6.fanpop.com/image/photos/33400000/Pizza-Fail-pizza-33490730-3072-2304.jpg');*/
+	font-family: 'Fredericka the Great', cursive;
+	text-align: center;
+	font-size: 5vw;
+	background-size: cover;
+	margin: auto;
+}
+
 #menu {	
 	background-image: url('../img/bg.jpeg');
 	background-color: #562517;	
@@ -170,9 +181,6 @@ form {
 .item img {
 	width: 100%;
 }
-/*textarea {
-	width: 100%;
-}*/
 
 #admin-sub {
     width: 100%;
@@ -197,11 +205,13 @@ form {
 	font-family: 'Fredericka the Great', cursive;
 
 }
+
 .user-login {
 	float:right;
 	text-align:right;
 	margin-right:10px;
 }
+
 #dropdown{
 	ul : list-style: none;padding: 0px;margin: 0px;};
 	ul li {display: block;position: relative;float: left;border:1px solid #000};
