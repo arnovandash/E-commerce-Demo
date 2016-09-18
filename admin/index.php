@@ -17,9 +17,9 @@
                     <label for="item">Item Name:</label>
                     <input type="text" required name="item" class="item">
                     <br/>
-                    <label for="desc">Description:</label>
-                    <textarea required name="desc" class="desc"></textarea>
-                    <br>
+                   <!--  <label for="desc">Description:</label>
+                    <textarea required name="desc" class="desc"></textarea> -->
+                   <!--  <br> -->
                     <label for="type">Item type:</label>
                     <select required name="type" id="">
                         <option value="pizza">Pizza</option>

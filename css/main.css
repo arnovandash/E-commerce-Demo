@@ -167,9 +167,9 @@ input[type=text], select, textarea, input[type=password] {
 	/*border: 1px solid black;*/
 	padding: 5px;
 	margin-top: 5px;
-	border: 3px solid #FFC50F ;
+	/*border: 3px solid #FFC50F ;*/
+	border: 3px solid #FFF ;
     border-radius: 5px;
-    padding: 10px 32px;
     text-transform: uppercase;
     color: yellow;
     font-size: .8vw;
@@ -231,6 +231,15 @@ li:hover li a:hover {background: #000;}
 }
 
 /*add to cart*/
+.add-to-cart {
+	display: none;
+}
+.item:hover .add-to-cart {
+	display: block;
+}
+.item:hover {
+	background-color: #bdb2a8;
+}
 .add-to-cart input[type=number] {
 	width: 2vw;
 }

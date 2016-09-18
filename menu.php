@@ -33,13 +33,19 @@ function display_products()
 <h1 class="textborder">Pizza Menu</h1>
 	<?php  
 	$data = display_products();
+	if (count($data) > 0)
+		echo "<h1>Pizza</h1>";
 	foreach ($data as $key => $value) : ?>
 	<div class="item">
 		<img src="img/<?php echo trim($value['pizza_img']); ?>">
 		<p><?php echo trim($value['pizza_name']); ?></p>
+		<p><?php
+		 echo money_format("R %.2n", $value['pizza_price']); ?></p>
 		<div class="add-to-cart">
 			<form method="post" action="">
 				<input type="number" min="1" value="1" name="qlty">
+				<input type="text" hidden  value="<?php echo $value['pizza_name'];?>" name="product">
+				<input type="text" hidden  value="<?php echo $value['pizza_price'];?>" name="price">
 				<select>
 					<option>Small</option>
 					<option>Medium</option>

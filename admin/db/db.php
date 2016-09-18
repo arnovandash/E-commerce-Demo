@@ -9,6 +9,6 @@ if (filter_has_var(INPUT_POST, 'add'))
     $img_url = $_FILES['image']['name'];
     $temp = $_FILES['image']['tmp_name'];
     $img_url = upload_image($img_url, $temp);
-    insert_data($type, $item_name, $price, $desc, $img_url);
-    require_once('../index.php');
+    insert_data($type, $item_name, $price, $img_url);
+    // require_once('../index.php');
 }
