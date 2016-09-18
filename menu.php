@@ -1,9 +1,10 @@
 <?php
 session_start();
-$db = mysqli_connect('localhost', 'root', '000000', 'rush');
+include ("cart.php");
+$db = mysqli_connect('localhost', 'root', 'password', 'rush');
 $connection_error = mysqli_connect_error();
 if ($connection_error != null) {
-    echo 'error'; //don't forget to create a html to display an error
+    header('Location: ./error.php');
     exit();
 }
 function display_products()
@@ -21,7 +22,6 @@ function display_products()
     return ($data);
 }
 ?>
-
 <html>
 <head>
 	<title>Rush 00</title>
