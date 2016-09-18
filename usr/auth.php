@@ -13,9 +13,9 @@ function user_exists($user, $file_array)
 
 function auth($login, $passwd)
 {
-    $file_array = unserialize(file_get_contents('../private/passwd'));
+    $file_array = unserialize(file_get_contents('./private/passwd'));
     $usr_index = user_exists($login, $file_array);
-    $pass = hash('whirlpool', $passwd, false);
+    $pass = hash('whirlpool', $_POST['passwd']);
     if (($usr_index >= 0) && ($file_array[$usr_index]['passwd'] === $pass))
         return (true);
     else
