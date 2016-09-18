@@ -16,9 +16,9 @@
                 <form action="db/db.php" method="post">
                     <label for="item">Item Name:</label>
                     <input type="text" required name="item" class="item">
-                    <br>
+                    <br/>
                     <label for="desc">Description:</label>
-                    <input type="text" required name="desc" class="desc">
+                    <textarea required name="desc" class="desc"></textarea>
                     <br>
                     <label for="type">Item type:</label>
                     <select required name="type" id="">

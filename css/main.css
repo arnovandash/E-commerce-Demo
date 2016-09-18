@@ -98,7 +98,7 @@ aside {
 #admin h1 {
 	border-bottom: 1px solid #f2e3c6;
 }
-input[type=text], select {
+input[type=text], select, textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -107,6 +107,9 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+/*textarea {
+	width: 100%;
+}*/
 
 input[type=submit] {
     width: 100%;
