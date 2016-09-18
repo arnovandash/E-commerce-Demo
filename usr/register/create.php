@@ -27,6 +27,7 @@ if ($_POST['login'] != "" && $_POST['passwd'] != "")
     {
         $file_array[] = $account_array;
         file_put_contents('../private/passwd', serialize($file_array));
+        header('Location: ../login.html');
         echo "Registration successful!\n";
     }
 }
