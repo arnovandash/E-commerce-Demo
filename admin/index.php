@@ -13,7 +13,7 @@
             </aside>
             <content>
                 <h1>Admin Area</h1>
-                <form action="db/db.php" method="post">
+                <form action="db/db.php" method="post" enctype="multipart/form-data">
                     <label for="item">Item Name:</label>
                     <input type="text" required name="item" class="item">
                     <br/>
@@ -32,7 +32,7 @@
                     <input required type="text" name="price" class="price">
                     <label for="image"></label>
                     <input required type="file" name="image" class="image">
-                    <input type="submit" name="add" value="Submit">
+                    <input type="submit" id="admin-sub" name="add" value="Submit">
                 </form>
             </content>
             <aside>

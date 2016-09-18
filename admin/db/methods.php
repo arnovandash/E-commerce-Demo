@@ -25,16 +25,16 @@ function upload_image($image, $ftp_file){
 
 // Path and file name
 
-    $img_url = "../img/".$tr_image;
+    $img_url = "../../img/" .$tr_image;
 
     if (file_exists($img_url)){
 
-        $temp = str_ireplace('../img/', '', $tr_image);
+        $temp = str_ireplace('../../img/', '', $tr_image);
 
-        $img_url = "../img/". rand(1,99999).$temp;
+        $img_url = "../../img/". rand(1,99999).$temp;
 
     }
-    $img = str_ireplace('../img/', ' ', $img_url);
+    $img = str_ireplace('../../img/', ' ', $img_url);
 // Run the move_uploaded_file() function here
     if(move_uploaded_file($file_tmp_loc, $img_url)){
         $results = $img;

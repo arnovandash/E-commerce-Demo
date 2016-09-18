@@ -8,7 +8,7 @@ if (filter_has_var(INPUT_POST, 'add'))
     $type = filter_input(INPUT_POST, 'type', FILTER_SANITIZE_STRING);
     $img_url = $_FILES['image']['name'];
     $temp = $_FILES['image']['tmp_name'];
-    echo "$temp";
     $img_url = upload_image($img_url, $temp);
     insert_data($type, $item_name, $price, $desc, $img_url);
+    require_once('../index.php');
 }
