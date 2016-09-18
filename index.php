@@ -7,7 +7,7 @@
 </head>
 <body id="main">
 <?php require_once('header.php'); ?>
-<div id="container">
+<div id="container"  class="textborder">
 	<h1 id="title">Get it while it's hot!</h1>
 	<p id="subtitle">We create custom, personal pizzas with quality ingredients in only five minutes.</p>
 	<p id="order">
