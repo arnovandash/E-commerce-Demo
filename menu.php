@@ -1,8 +1,24 @@
 <?php
-include("cart.php");
-
-session_start()
-
+$db = mysqli_connect('localhost', 'root', '000000', 'rush');
+$connection_error = mysqli_connect_error();
+if ($connection_error != null) {
+    echo 'error'; //don't forget to create a html to display an error
+    exit();
+}
+function display_products()
+{
+    global $db;
+    $data = [];
+    $results = mysqli_query($db, 'SELECT * FROM `pizza`');
+    if ($results)
+    {
+        while ($row = mysqli_fetch_assoc($results))
+        {
+            $data[] = $row;
+        }
+    }
+    return ($data);
+}
 ?>
 
 <html>
@@ -13,30 +29,22 @@ session_start()
 </head>
 <body id="menu" class="textborder">
 <?php require_once('header.php'); ?>
-<h1>{we are not finished yet.}</h1>
 
 <h1> Welcome<?php echo " ".$_SESSION['logged_on_user'];?>!</h1>
 <br />
 
 <button><a class="buttontext" href="./usr/login.html"> Login </a></button>
 <button><a class="buttontext" href="./usr/logout.php"> Logout </a></button>
-
-<div>
-
-	<h2> Margherita </h2>
-	<input type="submit" name="Add Regina" value="Add to cart" onclick="add_cart("marg")"/>
-	<h2> Regina </h2>
-	<button type="button">Add to Cart!</button>
-	<h2> Hawaiian </h2>
-	<button type="button">Add to Cart!</button>
-	<h2> Meaty Bastard </h2>
-	<button type="button">Add to Cart!</button>
-	<h2> Heart Stopper </h2>
-	<button type="button">Add to Cart!</button>
-	<h2> Face Melter </h2>
-	<button type="button">Add to Cart!</button>
-	<br />
-	<button type="button">Buy</button>
+<div class="menu">
+	<?php  
+	$data = display_products();
+	foreach ($data as $key => $value) : ?>
+	<div class="item">
+		<img src="img/<?php echo trim($value['pizza_img']); ?>">
+		<p><?php echo trim($value['pizza_name']); ?></p>
+		<button>add to cart</button>
+	</div>
+	<?php endforeach; ?>
 </div>
 </body>
 </html>
